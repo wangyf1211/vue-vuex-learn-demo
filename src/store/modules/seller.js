@@ -2,11 +2,15 @@ import types from '../types'
 import axios from 'axios'
 export default{
     state:{
-        seller:{}
+        seller:{},
+        detailShow:false
     },
     getters:{
         seller(state){
             return state.seller
+        },
+        detailShow(state){
+            return state.detailShow
         }
     },
     actions:{
@@ -16,11 +20,23 @@ export default{
                     context.commit(types.GET_SELLER,res.data.data)
                 }
             })
+        },
+        showDetail(context){
+            context.commit(types.SHOW_DETAIL)
+        },
+        hideDetail(context){
+            context.commit(types.HIDE_DETAIL)
         }
     },
     mutations:{
         [types.GET_SELLER](state,payload){
             state.seller=payload
+        },
+        [types.SHOW_DETAIL](state){
+            state.detailShow=true
+        },
+        [types.HIDE_DETAIL](state){
+            state.detailShow=false
         }
     }
 }

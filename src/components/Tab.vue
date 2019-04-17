@@ -49,7 +49,7 @@ export default {
       &:hover {
         color: #229e9e;
         background: #fff;
-        border-radius: 5px 5px 0 0;
+        border-radius: 3px 3px 0 0;
       }
     }
   }
