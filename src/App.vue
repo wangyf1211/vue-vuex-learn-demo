@@ -1,14 +1,15 @@
 <template>
   <div id="app">
     <v-header></v-header>
-    <router-view/>
     <v-tab></v-tab>
+    <router-view/>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 import Tab from '@/components/Tab'
+import Triangle from '@/components/Triangle'
 export default {
   name: 'App',
   components:{
@@ -19,8 +20,4 @@ export default {
 </script>
 
 <style lang="less" scope>
-v-footer {
-position: absolute;
-bottom:0px;
-}
 </style>

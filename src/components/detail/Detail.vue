@@ -5,7 +5,7 @@
       leave-active-class="animated slideOutRight"
     >
       <div class="detail" v-show="detailShow">
-        <button @click="hideDetail">&lt;&lt;</button>
+        <a href="#" @click="hideDetail">&gt;&gt;</a>
         <p>简介：{{seller.bulletin}}</p>
       </div>
     </transition>
@@ -45,20 +45,20 @@ export default {
     margin-left: auto;
     margin-right: 25px;
   }
-  button {
+  a {
+    display:block;
     position: fixed;
-    top: 60px;
+    top: 50px;
     color: #fff;
     font-size: 15px;
     background: #ffffff5c;
     border-radius: 5px;
     font-weight: 700;
     border-width: 0;
+    width:30px;
+    text-align: center;
     height: 25px;
-  }
-  button:hover{
-    transform:scale(1.1,1.1);
-    background: #ffffff78;
+    line-height:25px;
   }
 }
 </style>
